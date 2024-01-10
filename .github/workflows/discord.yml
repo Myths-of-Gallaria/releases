@@ -15,4 +15,4 @@ jobs:
           url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"content": "skull"}'
+          data: '{"content": "a new MoG update was just released!! download it here: [insert link]"}'
