@@ -1,0 +1,13 @@
+name: discord updates
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send message through webhook
+        run: curl -XPOST -H "Content-Type: application/json" -d '{content: "silly"}' "${{ secrets.DISCORD_WEBHOOK_URL }}"
