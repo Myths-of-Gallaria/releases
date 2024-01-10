@@ -12,7 +12,7 @@ jobs:
       - name: send message through webhook
         uses: fjogeleit/http-request-action@v1.15.2
         with:
-          url: ${{DISCORD_WEBHOOK_URL}}
+          url: ${{ secrets.DISCORD_WEBHOOK_URL }}
           method: 'POST'
           customHeaders: '{"Content-Type": "application/json"}'
           data: '{"content": "skull"}'
